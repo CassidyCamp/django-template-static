@@ -7,7 +7,13 @@ def home_view(request: HttpRequest) -> HttpResponse:
 
 
 def about_view(request: HttpRequest) -> HttpResponse:
-    return render(request, 'about.html')
+    data = {
+        'first_name': 'Ali',
+        'last_name': "Valiyev",
+        'phone': '+998991231212',
+        'email': 'alijon@gmail.com'
+    }
+    return render(request, 'about.html', context=data)
 
 
 def blog_view(request: HttpRequest) -> HttpResponse:
